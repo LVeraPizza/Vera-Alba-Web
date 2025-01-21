@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Vera Alba - Panaderia de Masa Madre">
+    <title>Vera Alba</title>
+    <link rel="stylesheet" href="css/styles.css"> <!-- Estilos CSS -->
+    <style>
+        /* Header */
+        header {
+            position: fixed;
+            /* Fijar en la parte superior */
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1000;
+            padding: 10px 5px;
+            background-color: black;
+        }
+
+
+        /* Estilos para la página "Nosotros" */
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            color: #0f0e0e;
+            background-color: #e9e4e4;
+        }
+
+        /* Contenedor general */
+        .container {
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+            max-width: 1500px;
+            margin: 100px auto;
+        }
+
+        /* Bloques de contenido */
+        .block {
+            display: flex;
+            align-items: center;
+            gap: 90px;
+        }
+
+        /* Imagen */
+        .block img {
+            max-width: 600px;
+            height: 600px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Texto */
+        .block .content {
+            max-width: 500px;
+        }
+
+        .block .content h2 {
+            font-size: 45px;
+            margin-bottom: 10px;
+            color: #333;
+        }
+
+        .block .content p {
+            font-size: 24px;
+            line-height: 1.6;
+            color: #666;
+        }
+
+        /* Invertir dirección del bloque */
+        .block.reverse {
+            flex-direction: row-reverse;
+        }
+
+        .image-container {
+            display: flex;
+            justify-content: space-between;
+            /* Centra las imágenes sin espacio entre ellas */
+            width: 70%;
+            margin: 0 auto;
+            margin-bottom: 50px;
+        }
+
+        .image {
+            width: 30%;
+            transition: transform 0.3s ease;
+        }
+
+        .image:hover {
+            transform: scale(1.1);
+        }
+
+        .title-container {
+            text-align: center;
+            /* Centra el texto */
+            margin-bottom: 20px;
+            /* Espacio entre el título y las imágenes */
+        }
+
+        .title {
+            font-size: 24px;
+            /* Tamaño de fuente del título */
+            font-weight: bold;
+            /* Puedes ajustar el grosor de la fuente */
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Header -->
+    <header id="header">
+        <nav>
+            <div class="logo">
+                <img src="img/logo_VA.png" alt="Logo Vera Alba">
+            </div>
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="nosotros.html">Nosotros</a></li>
+                <li class="dropdown">
+                    <a href="productos.html">Productos <span class="arrow">↓</span></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#">Panes</a></li>
+                        <li><a href="#">Panificados</a></li>
+                        <li><a href="#">Prepizzas</a></li>
+                        <li><a href="#">Focacceria</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a href="enterate.html">Enterate <span class="arrow">↓</span></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#">Venta por mayor</a></li>
+                        <li><a href="#">Congelados</a></li>
+                    </ul>
+                </li>
+                <li><a href="contacto.html" class="contacto-btn">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="container">
+        <!-- Bloque 1: Imagen a la izquierda, texto a la derecha -->
+        <div class="block">
+            <img src="img/molde_semi_integral.png" alt="Ejemplo de imagen">
+            <div class="content">
+                <h2>Título del Bloque 1</h2>
+                <p>Este es el texto que acompaña a la imagen ubicada a la izquierda. Puedes usarlo para describir la
+                    imagen o añadir cualquier información importante.</p>
+            </div>
+        </div>
+
+        <!-- Bloque 2: Texto a la izquierda, imagen a la derecha -->
+        <div class="block reverse">
+            <img src="img/molde_semi_integral.png" alt="Ejemplo de imagen">
+            <div class="content">
+                <h2>Título del Bloque 2</h2>
+                <p>En este bloque, el texto está del lado izquierdo y la imagen se encuentra a la derecha. Puedes
+                    alternar estos diseños según lo necesites.</p>
+            </div>
+        </div>
+
+        <!-- Bloque 3: Imagen a la izquierda, texto a la derecha -->
+        <div class="block">
+            <img src="img/molde_semi_integral.png" alt="Ejemplo de imagen">
+            <div class="content">
+                <h2>Título del Bloque 1</h2>
+                <p>Este es el texto que acompaña a la imagen ubicada a la izquierda. Puedes usarlo para describir la
+                    imagen o añadir cualquier información importante.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="title-container">
+        <h2 class="title">PRODUCTOS PRE-COCIDOS</h2>
+    </div>
+    <div class="image-container">
+        <img src="img/molde_semi_integral.png" alt="Imagen 1" class="image">
+        <img src="img/molde_semi_integral.png" alt="Imagen 2" class="image">
+        <img src="img/molde_semi_integral.png" alt="Imagen 3" class="image">
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-container">
+            <div class="footer-column">
+                <h3>Información</h3>
+                <ul>
+                    <li><a href="#">Sobre nosotros</a></li>
+                    <li><a href="#">Contacto</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-column">
+                <h3>Redes sociales</h3>
+                <ul>
+                    <li><a href="#">Facebook</a></li>
+                    <li><a href="#">Instagram</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-column">
+                <h3>Contacto</h3>
+                <p>vera-alba@gmail.com</p>
+                <p>+54 9 3464 549463</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p> "ESTAMOS HORNEANDO"</p>
+        </div>
+    </footer>
+    <script src="js/app.js"></script>
+
+</body>
+
+</html>
